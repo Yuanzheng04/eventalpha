@@ -1,0 +1,14 @@
+# secrets — never commit your key
+.env
+
+# generated data & outputs
+cache/
+out/
+*.parquet
+*.pkl
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

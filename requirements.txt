@@ -1,0 +1,8 @@
+requests
+openai
+yfinance
+pandas
+numpy
+pyarrow
+transformers
+torch
