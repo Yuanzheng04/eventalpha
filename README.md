@@ -97,8 +97,7 @@ STAGE 2 (numerical, fast, re-runnable)
 ```
 
 Core modules: `signals.py` (event decay + cross-sectional engine),
-`validation.py` (MC / bootstrap / walk-forward). The factor is **pure sentiment**
-(confidence-weighted, time-decayed); no technical signal is blended in.
+`validation.py` (MC / bootstrap / walk-forward). 
 
 > On controls: a momentum baseline is intentionally omitted. On large-cap daily
 > horizons both sentiment and momentum are near-zero, so comparing them is
