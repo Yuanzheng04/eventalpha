@@ -1,15 +1,9 @@
 # EventAlpha — A Look-Ahead-Controlled LLM Event-Signal Research Framework
 
-EventAlpha turns SEC filing text into a standardized equity **sentiment factor**
-using an LLM, then evaluates it with the discipline of a quant factor-research
-pipeline — cross-sectional IC, train/test parameter selection, quantile
-long/short backtests, transaction-cost adjustment, and a full statistical
-validation suite.
+EventAlpha tests whether SEC filing text can be turned into a usable post-filing equity signal. It uses an LLM to score filing language, converts the scores into cross-sectional factors, and evaluates them through IC analysis, train/test parameter selection, quantile long/short backtests, transaction-cost adjustment, and robustness checks. A FinBERT baseline is included to compare the LLM signal against a standard financial-text sentiment model.
 
-Its defining feature is an **explicit, verified defense against LLM look-ahead
-bias** — the failure mode that makes most "LLM + backtest" projects silently
-invalid. Everything runs on **free, public data** (SEC EDGAR + yfinance), so the
-entire study is reproducible end to end.
+The main emphasis is timing discipline. Many “LLM + backtest” projects look reasonable but accidentally leak future information into the signal. EventAlpha keeps the filing date, signal date, and return window explicit, so the results are evaluated as a real factor test rather than a text-generation demo. The pipeline runs end to end on public SEC EDGAR filings and yfinance price data.
+
 
 ---
 
