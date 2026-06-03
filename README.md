@@ -7,7 +7,7 @@ The main emphasis is timing discipline. Many “LLM + backtest” projects look 
 
 ---
 
-## ⭐ Headline: controlling and *verifying* LLM look-ahead bias
+## Headline: controlling and *verifying* LLM look-ahead bias
 
 A large language model's weights already encode how stocks performed after past
 events. If you ask it to "score this 2024 earnings release," it can quietly use
@@ -30,18 +30,18 @@ layers — three preventive, **one that actually measures the leakage**:
    knowledge of any individual stock's future**. We compare the *information
    coefficient* of the LLM scores against FinBERT's on the same text. If the
    LLM's IC were far above FinBERT's, that gap would flag hindsight leakage. In
-   this study the two were comparable and both near zero — evidence the LLM was
+   this study the two were comparable — evidence the LLM was
    reading the text, not recalling outcomes.
 4. **Out-of-sample validation.** Monte Carlo permutation, bootstrap Sharpe CIs,
    and walk-forward consistency.
 
 > The point isn't that the model never cheats — it's that the framework can
-> **detect** whether it did, with a number, instead of asking you to trust a
+> detect whether it did, with a number, instead of asking you to trust a
 > prompt.
 
 ---
 
-## 📉 Honest result: a near-null on public data (and why)
+## Honest result: a near-null on public data (and why)
 
 Across S&P 100 earnings filings (Jan 2024 – May 2025), the sentiment factor showed
 **no statistically significant cross-sectional predictive power** at a daily
@@ -75,7 +75,7 @@ Each swaps in without changing the evaluation harness.
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 Two physically decoupled stages — expensive LLM scoring runs once and is cached;
 the numerical backtest re-runs in seconds while you tune parameters.
@@ -107,7 +107,7 @@ Core modules: `signals.py` (event decay + cross-sectional engine),
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ```bash
 pip install -r requirements.txt
