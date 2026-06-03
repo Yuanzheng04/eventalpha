@@ -32,7 +32,7 @@ layers — three preventive, **one that actually measures the leakage**:
    LLM's IC were far above FinBERT's, that gap would flag hindsight leakage. In
    this study the two were comparable — evidence the LLM was
    reading the text, not recalling outcomes.
-4. **Out-of-sample validation.** Monte Carlo permutation, bootstrap Sharpe CIs,
+4. **Sample validation.** Monte Carlo permutation, bootstrap Sharpe CIs,
    and walk-forward consistency.
 
 > The point isn't that the model never cheats — it's that the framework can
