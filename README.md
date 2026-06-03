@@ -148,7 +148,4 @@ Outputs land in `out/` (`factor_run_card.md`, `run_card.md`) and `cache/`.
 
 ## License / data
 
-Reuses two functions (`compute_event_signal`, `combine_signals`) and the
-validation methodology from the open-source
-[Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) project (MIT). Data: SEC
-EDGAR (public) and yfinance. No proprietary data is used.
+This project is released under the MIT License. The workflow uses public SEC EDGAR filings and yfinance price data, so the example study can be reproduced without proprietary datasets.
